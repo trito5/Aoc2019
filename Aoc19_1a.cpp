@@ -11,7 +11,7 @@ int main()
 	while (infile >> mass)
 	{
 		std::istringstream iss(mass);
-		fuel = fuel + floor(mass / 3) - 2;
+		fuel += floor(mass / 3) - 2;
 	}
 
 	std::cout << fuel << std::endl;
