@@ -2,18 +2,22 @@
 #include <math.h>  
 #include <fstream>
 #include <sstream>
-int main()
 
-{
-	std::ifstream infile("Input_day1.txt");
+class Aoc19_1a {
+	public:
 	int fuel = 0;
 	int mass;
-	while (infile >> mass)
+
+	void run()
 	{
-		std::istringstream iss(mass);
-		fuel += floor(mass / 3) - 2;
+		std::ifstream infile("Input_day1.txt");
+
+		while (infile >> mass)
+		{
+			std::istringstream iss(mass);
+			fuel += floor(mass / 3) - 2;
+		}
+		std::cout << "Day1a: " << fuel << std::endl;
 	}
 
-	std::cout << fuel << std::endl;
-	return 0;
-}
+};
